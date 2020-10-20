@@ -15,6 +15,8 @@ namespace MaximumNumberCheck
             //Console.WriteLine(floatoutput);
             //string stringoutput = MaxNum.MaximumStringNumber("22", "33", "44");
             //Console.WriteLine(stringoutput);
+            
+            //Generic Method
             int[] intArray = { 112, 344, 432, 555, 678 };
             GenericMaximum<int> generic = new GenericMaximum<int>(intArray);
             generic.PrintMaxValue();

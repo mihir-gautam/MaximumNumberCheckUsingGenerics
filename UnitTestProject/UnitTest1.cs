@@ -99,5 +99,30 @@ namespace UnitTestProject
             string expected = str3;
             Assert.AreEqual(expected, result);
         }
+        [TestMethod]
+        public void Given_StringArray_Check_With_Generic_Return_MaxValue()
+        {
+            string expected = "Peach";
+            GenericMaximum<string> generic = new GenericMaximum<string>(new string[4] { "Apple", "Banana", "Guava", "Peach" });
+            string actual = generic.MaxMethod();
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void Given_IntegerArray_Check_With_Generic_Return_MaxValue()
+        {
+            int expected = 99;
+            GenericMaximum<int> generic = new GenericMaximum<int>(new int[5] { 24, 45, 65, 86, 99 });
+            int actual = generic.MaxMethod();
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void Given_FloatArray_Check_With_Generic_Return_MaxValue()
+        {
+            GenericMaximum<float> generic = new GenericMaximum<float>(new float[3] { 10.5f, 16.4f, 88.9f });
+            float expected = 88.9f;
+            float actual = generic.MaxMethod();
+            Assert.AreEqual(expected, actual);
+        }
+
     }
 }

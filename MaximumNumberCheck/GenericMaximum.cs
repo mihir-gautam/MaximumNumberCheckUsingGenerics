@@ -21,6 +21,7 @@ namespace MaximumNumberCheck
         {
 
         }
+        //UC4 
         public T MaxValue(params T[] values)
         {
             var sorted_values = Sort(values);
@@ -28,6 +29,7 @@ namespace MaximumNumberCheck
             return sorted_values[sorted_values.Length - 1];
         }
 
+        //UC5
         public T MaxMethod()
         {
             var max = MaxValue(this.value);
