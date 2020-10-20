@@ -18,8 +18,9 @@ namespace MaximumNumberCheck
         {
             if (firstValue.CompareTo(secondValue)> 0 && firstValue.CompareTo(thirdValue) >0||
                 firstValue.CompareTo(secondValue) >= 0 && firstValue.CompareTo(thirdValue) > 0 ||
-                firstValue.CompareTo(secondValue) > 0 && firstValue.CompareTo(thirdValue) >= 0){
-                return firstValue;
+                firstValue.CompareTo(secondValue) > 0 && firstValue.CompareTo(thirdValue) >= 0)
+            {
+                 return firstValue;
             }
             if (secondValue.CompareTo(firstValue) > 0 && secondValue.CompareTo(thirdValue) > 0 ||
                 secondValue.CompareTo(firstValue) >= 0 && secondValue.CompareTo(thirdValue) > 0 ||
@@ -50,7 +51,6 @@ namespace MaximumNumberCheck
         {
 
         }
-        //UC4 
         public T MaxValue(params T[] values)
         {
             var sorted_values = Sort(values);
@@ -58,7 +58,6 @@ namespace MaximumNumberCheck
             return sorted_values[sorted_values.Length - 1];
         }
 
-        //UC5
         public T MaxMethod()
         {
             var max = MaxValue(this.value);
