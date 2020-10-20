@@ -68,5 +68,36 @@ namespace UnitTestProject
             float expected = num3;
             Assert.AreEqual(expected, result);
         }
+        [TestMethod]
+        [DataRow("Peach","Banana","Apple")]
+        [DataRow("Pumpkin","Amla", "Burger")]
+        public void Given_Strings_Max_At_First_Position_Return_Max(string str1, string str2, string str3)
+        {
+            MaxNumberCheck MaxString = new MaxNumberCheck();
+            string result = MaxString.MaximumStringNumber(str1, str2, str3);
+            string expected = str1;
+            Assert.AreEqual(expected, result);
+        }
+
+        [TestMethod]
+        [DataRow("Burger","Pumpkin", "Amla")]
+        [DataRow("Banana", "Peach", "Burger")]
+        public void Given_Strings_Max_At_Second_Position_Return_Max(string str1, string str2, string str3)
+        {
+            MaxNumberCheck MaxString = new MaxNumberCheck();
+            string result = MaxString.MaximumStringNumber(str1, str2, str3);
+            string expected = str2;
+            Assert.AreEqual(expected, result);
+        }
+        [TestMethod]
+        [DataRow("Apple","Banana", "Peach")]
+        [DataRow("Amla", "Burger", "Pumpkin")]
+        public void Given_Strings_Max_At_Third_Position_Return_Max(string str1, string str2, string str3)
+        {
+            MaxNumberCheck MaxString = new MaxNumberCheck();
+            string result = MaxString.MaximumStringNumber(str1, str2, str3);
+            string expected = str3;
+            Assert.AreEqual(expected, result);
+        }
     }
 }
