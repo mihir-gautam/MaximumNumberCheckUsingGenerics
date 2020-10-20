@@ -80,7 +80,7 @@ namespace UnitTestProject
         }
 
         [TestMethod]
-        [DataRow("Burger","Pumpkin", "Amla")]
+        [DataRow("Burger", "Pumpkin", "Amla")]
         [DataRow("Banana", "Peach", "Burger")]
         public void Given_Strings_Max_At_Second_Position_Return_Max(string str1, string str2, string str3)
         {
@@ -90,7 +90,7 @@ namespace UnitTestProject
             Assert.AreEqual(expected, result);
         }
         [TestMethod]
-        [DataRow("Apple","Banana", "Peach")]
+        [DataRow("Apple", "Banana", "Peach")]
         [DataRow("Amla", "Burger", "Pumpkin")]
         public void Given_Strings_Max_At_Third_Position_Return_Max(string str1, string str2, string str3)
         {
@@ -123,6 +123,5 @@ namespace UnitTestProject
             float actual = generic.MaxMethod();
             Assert.AreEqual(expected, actual);
         }
-
     }
 }
